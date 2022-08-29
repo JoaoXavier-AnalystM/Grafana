@@ -1,0 +1,5592 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Monitoramento CISCO-C9300L-24T-4X",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 444,
+  "iteration": 1661773847262,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 48,
+      "panels": [],
+      "title": "General Information",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 1
+      },
+      "id": 26,
+      "links": [],
+      "options": {
+        "content": "\n<center><h2>Cisco IOS Software [Gibraltar], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 16.12.02, RELEASE SOFTWARE (fc2) \n         ",
+        "mode": "html"
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "General"
+          },
+          "functions": [],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Device description"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 2,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          },
+          "useCaptureGroups": false
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Modelo",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
+              },
+              {
+                "color": "dark-red",
+                "value": 70
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 7,
+        "y": 1
+      },
+      "id": 24,
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Temperature"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:626",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Switch 1 - HotSpot "
+              ],
+              "text": "setAlias(Switch 1 - HotSpot )"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Switch 1 - HotSpot Temp Sensor, GREEN : Temperature"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Temperature"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:647",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Switch 1 - Inlet Temp"
+              ],
+              "text": "setAlias(Switch 1 - Inlet Temp)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "hide": false,
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Switch 1 - Inlet Temp Sensor, GREEN : Temperature"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Temperature"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:668",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Switch 1 - Outlet Temp"
+              ],
+              "text": "setAlias(Switch 1 - Outlet Temp)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "hide": false,
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Switch 1 - Outlet Temp Sensor, GREEN : Temperature"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Switch 1 - Temperatura",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
+              },
+              {
+                "color": "dark-red",
+                "value": 70
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 9,
+        "x": 15,
+        "y": 1
+      },
+      "id": 55,
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Temperature"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:134",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Switch 2 - HotSpot "
+              ],
+              "text": "setAlias(Switch 2 - HotSpot )"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Switch 2 - HotSpot Temp Sensor, GREEN : Temperature"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Temperature"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:155",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Switch 2 - Inlet Temp"
+              ],
+              "text": "setAlias(Switch 2 - Inlet Temp)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "hide": false,
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Switch 2 - Inlet Temp Sensor, GREEN : Temperature"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Temperature"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:176",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Switch 2 - Outlet Temp"
+              ],
+              "text": "setAlias(Switch 2 - Outlet Temp)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "hide": false,
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Switch 2 - Outlet Temp Sensor, GREEN : Temperature"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Switch 2 - Temperatura",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "DOWN",
+              "to": "",
+              "type": 1,
+              "value": "0"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 0,
+        "y": 5
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {
+          "valueSize": 30
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Status"
+          },
+          "functions": [],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Status",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dateTimeAsIso"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 7,
+        "y": 5
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {
+          "valueSize": 30
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Status"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Device uptime"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Uptime",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "noValue": "SW-CORE-CISCO-C9300L-24",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 15,
+        "y": 5
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^Device name$/",
+          "values": false
+        },
+        "text": {
+          "valueSize": 30
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "General"
+          },
+          "functions": [],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Device location"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 2,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Device Name",
+      "type": "stat"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 11,
+        "x": 0,
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "id": 14,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "CPU"
+          },
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "3: CPU utilization"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [
+        {
+          "$$hashKey": "object:315",
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU utilization %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:815",
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:816",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 5,
+        "w": 13,
+        "x": 11,
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "id": 16,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:612",
+          "alias": "Memory utilization %",
+          "color": "#FA6400",
+          "fill": 2,
+          "linewidth": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Memory"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:131",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Memory utilization %"
+              ],
+              "text": "setAlias(Memory utilization %)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Processor: Memory utilization"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory utilization %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:640",
+          "decimals": null,
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:641",
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 30,
+      "panels": [],
+      "title": "Interfaces Status",
+      "type": "row"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 14
+      },
+      "id": 39,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/1(FastConnect-GRU1): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet1/0/1 - FastConnect-GRU1",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "dark-yellow",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 14
+      },
+      "id": 37,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/2(Platiunum-3114): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet1/0/2 - Platiunum-3114",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "0"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 14
+      },
+      "id": 34,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/3(EXADATA): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet1/0/3 - Exadata",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 14
+      },
+      "id": 35,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/5(MPLS): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet1/0/5 - MPLS",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 19
+      },
+      "id": 38,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi2/0/1(FastConnect-GRU2): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet2/0/1 - FastConnect-GRU2",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 19
+      },
+      "id": 36,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi2/0/2(Platiunum-3115): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet2/0/2 - Platiunum-3115",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 19
+      },
+      "id": 33,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi2/0/3(EXADATA): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GigabitEthernet2/0/3 - Exadata",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 42,
+      "panels": [],
+      "repeat": null,
+      "title": "GigabitEthernet1/0/1 - FastConnect-GRU1",
+      "type": "row"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Down",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "VERIFICAR",
+              "to": "",
+              "type": 1,
+              "value": "1,1"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 1.1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 25
+      },
+      "id": 43,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/1(FastConnect-GRU1): Operational status"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "OperStatus",
+      "type": "stat"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 20,
+        "x": 4,
+        "y": 25
+      },
+      "hiddenSeries": false,
+      "id": 45,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:612",
+          "alias": "Bits received",
+          "color": "#FA6400",
+          "fill": 2,
+          "linewidth": 2
+        },
+        {
+          "$$hashKey": "object:766",
+          "alias": "Bits sent",
+          "color": "#1F60C4",
+          "fill": 2,
+          "linewidth": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:332",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Bits received"
+              ],
+              "text": "setAlias(Bits received)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/1(FastConnect-GRU1): Bits received"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:353",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Bits sent"
+              ],
+              "text": "setAlias(Bits sent)"
+            }
+          ],
+          "group": {
+            "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          },
+          "hide": false,
+          "host": {
+            "filter": "CISCO-C9300L-24T-4X"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/1(FastConnect-GRU1): Bits sent"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Interface Gi1/0/1 Traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:640",
+          "decimals": null,
+          "format": "bps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:641",
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "GBs"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 0,
+        "y": 29
+      },
+      "id": 44,
+      "maxPerRow": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.2",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "functions": [],
+          "group": {
+            "filter": "$grupo"
+          },
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "Interface Gi1/0/1(FastConnect-GRU1): Speed"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 0
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Speed",
+      "type": "stat"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 50,
+      "panels": [
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "2"
+                },
+                {
+                  "from": "",
+                  "id": 3,
+                  "text": "VERIFICAR",
+                  "to": "",
+                  "type": 1,
+                  "value": "1,1"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 1.1
+                  },
+                  {
+                    "color": "dark-red",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 35
+          },
+          "id": 51,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/2(Platiunum-3114): Operational status"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OperStatus",
+          "type": "stat"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {},
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 20,
+            "x": 4,
+            "y": 35
+          },
+          "hiddenSeries": false,
+          "id": 54,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.5.2",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:612",
+              "alias": "Bits received",
+              "color": "#FA6400",
+              "fill": 2,
+              "linewidth": 2
+            },
+            {
+              "$$hashKey": "object:766",
+              "alias": "Bits sent",
+              "color": "#1F60C4",
+              "fill": 2,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:536",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits received"
+                  ],
+                  "text": "setAlias(Bits received)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/2(Platiunum-3114): Bits received"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:557",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits sent"
+                  ],
+                  "text": "setAlias(Bits sent)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "hide": false,
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/2(Platiunum-3114): Bits sent"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Interface Gi1/0/2 Traffic",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:640",
+              "decimals": null,
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:641",
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "GBs"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 4,
+            "x": 0,
+            "y": 39
+          },
+          "id": 52,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/2(Platiunum-3114): Speed"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Speed",
+          "type": "stat"
+        }
+      ],
+      "title": "GigabitEthernet1/0/2 - Platiunum-3114",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "id": 57,
+      "panels": [
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "2"
+                },
+                {
+                  "from": "",
+                  "id": 3,
+                  "text": "VERIFICAR",
+                  "to": "",
+                  "type": 1,
+                  "value": "1,1"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  },
+                  {
+                    "color": "yellow",
+                    "value": 1.1
+                  },
+                  {
+                    "color": "dark-red",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 15
+          },
+          "id": 58,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/3(EXADATA): Operational status"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OperStatus",
+          "type": "stat"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {},
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 20,
+            "x": 4,
+            "y": 15
+          },
+          "hiddenSeries": false,
+          "id": 60,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.5.2",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:612",
+              "alias": "Bits received",
+              "color": "#FA6400",
+              "fill": 2,
+              "linewidth": 2
+            },
+            {
+              "$$hashKey": "object:766",
+              "alias": "Bits sent",
+              "color": "#1F60C4",
+              "fill": 2,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:740",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits received"
+                  ],
+                  "text": "setAlias(Bits received)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/3(EXADATA): Bits received"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:761",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits sent"
+                  ],
+                  "text": "setAlias(Bits sent)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "hide": false,
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/3(EXADATA): Bits sent"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Interface Gi1/0/3 Traffic",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:640",
+              "decimals": null,
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:641",
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "GBs"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 4,
+            "x": 0,
+            "y": 19
+          },
+          "id": 59,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/3(EXADATA): Speed"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Speed",
+          "type": "stat"
+        }
+      ],
+      "title": "GigabitEthernet1/0/3 - Exadata",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 36
+      },
+      "id": 62,
+      "panels": [
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "2"
+                },
+                {
+                  "from": "",
+                  "id": 3,
+                  "text": "VERIFICAR",
+                  "to": "",
+                  "type": 1,
+                  "value": "1,1"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 1.1
+                  },
+                  {
+                    "color": "dark-red",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 16
+          },
+          "id": 67,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/5(MPLS): Operational status"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OperStatus",
+          "type": "stat"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {},
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 20,
+            "x": 4,
+            "y": 16
+          },
+          "hiddenSeries": false,
+          "id": 69,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.5.2",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:612",
+              "alias": "Bits received",
+              "color": "#FA6400",
+              "fill": 2,
+              "linewidth": 2
+            },
+            {
+              "$$hashKey": "object:766",
+              "alias": "Bits sent",
+              "color": "#1F60C4",
+              "fill": 2,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:1073",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits received"
+                  ],
+                  "text": "setAlias(Bits received)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/5(MPLS): Bits received"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:1094",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits sent"
+                  ],
+                  "text": "setAlias(Bits sent)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "hide": false,
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/5(MPLS): Bits sent"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Interface Gi1/0/5 MPLS",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:640",
+              "decimals": null,
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:641",
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "GBs"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 4,
+            "x": 0,
+            "y": 20
+          },
+          "id": 68,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi1/0/5(MPLS): Speed"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Speed",
+          "type": "stat"
+        }
+      ],
+      "title": "GigabitEthernet1/0/5 - MPLS",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 37
+      },
+      "id": 64,
+      "panels": [
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "2"
+                },
+                {
+                  "from": "",
+                  "id": 3,
+                  "text": "VERIFICAR",
+                  "to": "",
+                  "type": 1,
+                  "value": "1,1"
+                },
+                {
+                  "from": "",
+                  "id": 4,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "0"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  },
+                  {
+                    "color": "semi-dark-yellow",
+                    "value": 1.1
+                  },
+                  {
+                    "color": "dark-red",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 17
+          },
+          "id": 74,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/1(FastConnect-GRU2): Operational status"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OperStatus",
+          "type": "stat"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {},
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 20,
+            "x": 4,
+            "y": 17
+          },
+          "hiddenSeries": false,
+          "id": 76,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.5.2",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:612",
+              "alias": "Bits received",
+              "color": "#FA6400",
+              "fill": 2,
+              "linewidth": 2
+            },
+            {
+              "$$hashKey": "object:766",
+              "alias": "Bits sent",
+              "color": "#1F60C4",
+              "fill": 2,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:923",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits received"
+                  ],
+                  "text": "setAlias(Bits received)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/1(FastConnect-GRU2): Bits received"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:944",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits sent"
+                  ],
+                  "text": "setAlias(Bits sent)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "hide": false,
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/1(FastConnect-GRU2): Bits sent"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Interface Gi2/0/1 Traffic",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:640",
+              "decimals": null,
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:641",
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "GBs"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 4,
+            "x": 0,
+            "y": 21
+          },
+          "id": 75,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/1(FastConnect-GRU2): Speed"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Speed",
+          "type": "stat"
+        }
+      ],
+      "title": "GigabitEthernet2/0/1 - FastConnect-GRU2",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 66,
+      "panels": [
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "2"
+                },
+                {
+                  "from": "",
+                  "id": 3,
+                  "text": "VERIFICAR",
+                  "to": "",
+                  "type": 1,
+                  "value": "1,1"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 1.1
+                  },
+                  {
+                    "color": "dark-red",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 18
+          },
+          "id": 77,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/2(Platiunum-3115): Operational status"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OperStatus",
+          "type": "stat"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {},
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 20,
+            "x": 4,
+            "y": 18
+          },
+          "hiddenSeries": false,
+          "id": 79,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.5.2",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:612",
+              "alias": "Bits received",
+              "color": "#FA6400",
+              "fill": 2,
+              "linewidth": 2
+            },
+            {
+              "$$hashKey": "object:766",
+              "alias": "Bits sent",
+              "color": "#1F60C4",
+              "fill": 2,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:1331",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits received"
+                  ],
+                  "text": "setAlias(Bits received)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/2(Platiunum-3115): Bits received"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:1352",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits sent"
+                  ],
+                  "text": "setAlias(Bits sent)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "hide": false,
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/2(Platiunum-3115): Bits sent"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Interface Gi2/0/2 Traffic",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:640",
+              "decimals": null,
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:641",
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "GBs"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 4,
+            "x": 0,
+            "y": 22
+          },
+          "id": 78,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/2(Platiunum-3115): Speed"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Speed",
+          "type": "stat"
+        }
+      ],
+      "title": "GigabitEthernet2/0/2 - Platiunum-3115",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 39
+      },
+      "id": 73,
+      "panels": [
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [
+                {
+                  "from": "",
+                  "id": 1,
+                  "text": "UP",
+                  "to": "",
+                  "type": 1,
+                  "value": "1"
+                },
+                {
+                  "from": "",
+                  "id": 2,
+                  "text": "Down",
+                  "to": "",
+                  "type": 1,
+                  "value": "2"
+                },
+                {
+                  "from": "",
+                  "id": 3,
+                  "text": "VERIFICAR",
+                  "to": "",
+                  "type": 1,
+                  "value": "1,1"
+                }
+              ],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  },
+                  {
+                    "color": "#EAB839",
+                    "value": 1.1
+                  },
+                  {
+                    "color": "dark-red",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 19
+          },
+          "id": 80,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "last"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/3(EXADATA): Operational status"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "OperStatus",
+          "type": "stat"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {},
+            "overrides": []
+          },
+          "fill": 1,
+          "fillGradient": 0,
+          "gridPos": {
+            "h": 9,
+            "w": 20,
+            "x": 4,
+            "y": 19
+          },
+          "hiddenSeries": false,
+          "id": 82,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "nullPointMode": "null",
+          "options": {
+            "alertThreshold": true
+          },
+          "percentage": false,
+          "pluginVersion": "7.5.2",
+          "pointradius": 2,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "$$hashKey": "object:612",
+              "alias": "Bits received",
+              "color": "#FA6400",
+              "fill": 2,
+              "linewidth": 2
+            },
+            {
+              "$$hashKey": "object:766",
+              "alias": "Bits sent",
+              "color": "#1F60C4",
+              "fill": 2,
+              "linewidth": 2
+            }
+          ],
+          "spaceLength": 10,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:1535",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits received"
+                  ],
+                  "text": "setAlias(Bits received)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/3(EXADATA): Bits received"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [
+                {
+                  "$$hashKey": "object:1556",
+                  "def": {
+                    "category": "Alias",
+                    "defaultParams": [],
+                    "name": "setAlias",
+                    "params": [
+                      {
+                        "name": "alias",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "Bits sent"
+                  ],
+                  "text": "setAlias(Bits sent)"
+                }
+              ],
+              "group": {
+                "filter": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+              },
+              "hide": false,
+              "host": {
+                "filter": "CISCO-C9300L-24T-4X"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/3(EXADATA): Bits sent"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeRegions": [],
+          "timeShift": null,
+          "title": "Interface Gi2/0/3 Traffic",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": true,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "$$hashKey": "object:640",
+              "decimals": null,
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "$$hashKey": "object:641",
+              "format": "percent",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ],
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          }
+        },
+        {
+          "datasource": null,
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "dark-green",
+                    "value": null
+                  }
+                ]
+              },
+              "unit": "GBs"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 5,
+            "w": 4,
+            "x": 0,
+            "y": 23
+          },
+          "id": 81,
+          "maxPerRow": 3,
+          "options": {
+            "colorMode": "background",
+            "graphMode": "none",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "mean"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "value"
+          },
+          "pluginVersion": "7.5.2",
+          "repeatDirection": "h",
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$grupo"
+              },
+              "host": {
+                "filter": "$host"
+              },
+              "item": {
+                "filter": "Interface Gi2/0/3(EXADATA): Speed"
+              },
+              "options": {
+                "disableDataAlignment": false,
+                "showDisabledItems": false,
+                "skipEmptyValues": false,
+                "useZabbixValueMapping": false
+              },
+              "proxy": {
+                "filter": ""
+              },
+              "queryType": 0,
+              "refId": "A",
+              "resultFormat": "time_series",
+              "table": {
+                "skipEmptyValues": false
+              },
+              "tags": {
+                "filter": ""
+              },
+              "trigger": {
+                "filter": ""
+              },
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 0
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Speed",
+          "type": "stat"
+        }
+      ],
+      "title": "GigabitEthernet2/0/3 - Exadata",
+      "type": "row"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS",
+          "value": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+        },
+        "datasource": null,
+        "definition": "Zabbix - group",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "grupo",
+        "options": [
+          {
+            "selected": true,
+            "text": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS",
+            "value": "GRUPO DFS/FILIAL/OESA/SP/CAMPINAS"
+          }
+        ],
+        "query": {
+          "application": "",
+          "group": "/.*GRUPO DFS/FILIAL/OESA/SP/CAMPINAS/",
+          "host": "",
+          "item": "",
+          "queryType": "group"
+        },
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
+        },
+        "datasource": null,
+        "definition": "Zabbix - host",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/.*GRUPO DFS/FILIAL/OESA/SP/CAMPINAS/",
+          "host": "/.*/",
+          "item": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "/.*CISCO/",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "Interface Vl117(PLATINUM-UTP-3115): Bits received",
+          "value": "Interface Vl117(PLATINUM-UTP-3115): Bits received"
+        },
+        "datasource": null,
+        "definition": "Zabbix - item",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": true,
+        "label": null,
+        "multi": false,
+        "name": "vlan117",
+        "options": [
+          {
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": true,
+            "text": "Interface Vl117(PLATINUM-UTP-3115): Bits received",
+            "value": "Interface Vl117(PLATINUM-UTP-3115): Bits received"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl117(PLATINUM-UTP-3115): Bits sent",
+            "value": "Interface Vl117(PLATINUM-UTP-3115): Bits sent"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl117(PLATINUM-UTP-3115): Interface type",
+            "value": "Interface Vl117(PLATINUM-UTP-3115): Interface type"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl117(PLATINUM-UTP-3115): Operational status",
+            "value": "Interface Vl117(PLATINUM-UTP-3115): Operational status"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl117(PLATINUM-UTP-3115): Speed",
+            "value": "Interface Vl117(PLATINUM-UTP-3115): Speed"
+          }
+        ],
+        "query": {
+          "application": "Network interfaces",
+          "group": "/.*/",
+          "host": "CISCO-C9300L-24T-4X",
+          "item": "/.*Interface Vl117/",
+          "queryType": "item"
+        },
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "Interface Vl116(PLATINUM-UTP-3114): Bits received",
+          "value": "Interface Vl116(PLATINUM-UTP-3114): Bits received"
+        },
+        "datasource": null,
+        "definition": "Zabbix - item",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "vlan116",
+        "options": [
+          {
+            "selected": true,
+            "text": "Interface Vl116(PLATINUM-UTP-3114): Bits received",
+            "value": "Interface Vl116(PLATINUM-UTP-3114): Bits received"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl116(PLATINUM-UTP-3114): Bits sent",
+            "value": "Interface Vl116(PLATINUM-UTP-3114): Bits sent"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl116(PLATINUM-UTP-3114): Interface type",
+            "value": "Interface Vl116(PLATINUM-UTP-3114): Interface type"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl116(PLATINUM-UTP-3114): Operational status",
+            "value": "Interface Vl116(PLATINUM-UTP-3114): Operational status"
+          },
+          {
+            "selected": false,
+            "text": "Interface Vl116(PLATINUM-UTP-3114): Speed",
+            "value": "Interface Vl116(PLATINUM-UTP-3114): Speed"
+          }
+        ],
+        "query": {
+          "application": "Network interfaces",
+          "group": "/.*/",
+          "host": "/.*CISCO-C9300L-24T-4X/",
+          "item": "/.*Interface Vl116/",
+          "queryType": "item"
+        },
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "Interface Gi1/0/1(FastConnect-GRU1): Operational status",
+          "value": "Interface Gi1/0/1(FastConnect-GRU1): Operational status"
+        },
+        "datasource": null,
+        "definition": "Zabbix - item",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Opstatus",
+        "options": [],
+        "query": {
+          "application": "/.*Network interfaces/",
+          "group": "/.*/",
+          "host": "/.*CISCO-C9300L-24T-4X/",
+          "item": "/.*Operational status/",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "CISCO-C9300L-24T-4X Monitoring",
+  "uid": "Cs9mYAinz",
+  "version": 10
+}
