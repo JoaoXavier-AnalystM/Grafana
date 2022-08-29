@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>6.0</version>
+    <date>2022-08-29T22:00:56Z</date>
+    <groups>
+        <group>
+            <uuid>7fb31f39713b4a7591897d1416ab29b0</uuid>
+            <name>Templates/Sefaz</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <uuid>bb59cf6587584143ae6596546b780cc3</uuid>
+            <template>Template_Sefaz_NFe_SdRedes</template>
+            <name>Template Sefaz NF-e</name>
+            <groups>
+                <group>
+                    <name>Templates/Sefaz</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>73c961ee23da47fdae5cddb48ea4f6c4</uuid>
+                    <name>Autorizacao</name>
+                    <key>autstatus[{$AUT} AUTORIZACAO]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>2db7f3b5b09e4ca08d64855e5f2d4dc8</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/autstatus[{$AUT} AUTORIZACAO],#1)=0</expression>
+                            <name>ServiÃ§o AutenticaÃ§Ã£o na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>7f5997c28c574d968a417982c302be73</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/autstatus[{$AUT} AUTORIZACAO],#1)=2</expression>
+                            <name>ServiÃ§o AutenticaÃ§Ã£o na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>d556956810f94997880a138f7f4e929f</uuid>
+                    <name>Consulta Cadastro</name>
+                    <key>conscad[{$AUT} CONSULTA.CADASTRO]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>a74c24b4927b460aa3f6400b1cd4e64e</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/conscad[{$AUT} CONSULTA.CADASTRO],#1)=0</expression>
+                            <name>ServiÃ§o Consultar Cadastro na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>7485e5c5680346929fb1d0341255d7e4</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/conscad[{$AUT} CONSULTA.CADASTRO],#1)=2</expression>
+                            <name>ServiÃ§o Consultar Cadastro na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>8387e079988e4249a7701e73e55b926f</uuid>
+                    <name>Consulta Protocolo</name>
+                    <key>consprot[{$AUT} CONSULTA.PROTOCOLO]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>3401662abb0941a18eeffafafa8b2e1d</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/consprot[{$AUT} CONSULTA.PROTOCOLO],#1)=0</expression>
+                            <name>ServiÃ§o Consulta Protocolo na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>ea30e9e8fe6847ff91fe8f739443e5a9</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/consprot[{$AUT} CONSULTA.PROTOCOLO],#1)=2</expression>
+                            <name>ServiÃ§o Consulta Protocolo na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>91a254d98b4242f1ad7a0fce9fbecb07</uuid>
+                    <name>Discovery NFe</name>
+                    <key>discovery[{$LINK}]</key>
+                    <delay>30s</delay>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Descoberta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>6c3eca65831f4a5fbb8432741332ffe9</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                            <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                            <priority>INFO</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>47391dc3f60c4f53845ffa1f8c832997</uuid>
+                    <name>InutilizaÃ§Ã£o</name>
+                    <key>inustatus[{$AUT} INUTILIZACAO]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>4da1842acae341d195f97714177a4ac6</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/inustatus[{$AUT} INUTILIZACAO],#1)=0</expression>
+                            <name>ServiÃ§o InutilizaÃ§Ã£o na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>7462fcb09fb948e2a213463a389018e7</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/inustatus[{$AUT} INUTILIZACAO],#1)=2</expression>
+                            <name>ServiÃ§o InutilizaÃ§Ã£o na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>7bfe3da7e53947cdb5cc432b5c0473b8</uuid>
+                    <name>RecepcÃ£o Evento</name>
+                    <key>recevent[{$AUT} RECEPCAO.EVENTO]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>09597269dc25448caf08a89160c0fe01</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/recevent[{$AUT} RECEPCAO.EVENTO],#1)=0</expression>
+                            <name>ServiÃ§o RecepÃ§Ã£o Evento na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>b1c5a0e4e6e24c8492a0fa9d5b00c0a9</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/recevent[{$AUT} RECEPCAO.EVENTO],#1)=2</expression>
+                            <name>ServiÃ§o RecepÃ§Ã£o Evento na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>be92162a0537420e8677f702e87557b2</uuid>
+                    <name>Retorno Autorizacao</name>
+                    <key>retoaut[{$AUT} RETORNO.AUT]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>104bec89bcaf48e590e1ec9635c3dbe8</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/retoaut[{$AUT} RETORNO.AUT],#1)=0</expression>
+                            <name>ServiÃ§o Retorno de AutenticaÃ§Ã£o na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>e557efd36aeb4796b68f6994ad4304dd</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/retoaut[{$AUT} RETORNO.AUT],#1)=2</expression>
+                            <name>ServiÃ§o Retorno de AutenticaÃ§Ã£o na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>13189664a4ff46ea961f19bc60420de8</uuid>
+                    <name>Status ServiÃ§o</name>
+                    <key>servstatus[{$AUT} SERVICO]</key>
+                    <delay>60s</delay>
+                    <history>7d</history>
+                    <trends>30d</trends>
+                    <valuemap>
+                        <name>SEFAZ</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Consulta Sefaz NF-e</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>545e786af9a34cc78526379570e0f6a0</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/servstatus[{$AUT} SERVICO],#1)=0</expression>
+                            <name>ServiÃ§o Status ServiÃ§o na {HOST.NAME} estÃ¡ indisponÃ­vel.</name>
+                            <priority>HIGH</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                        <trigger>
+                            <uuid>722b967fece649aaad386cb453847b23</uuid>
+                            <expression>last(/Template_Sefaz_NFe_SdRedes/servstatus[{$AUT} SERVICO],#1)=2</expression>
+                            <name>ServiÃ§o Status ServiÃ§o na {HOST.NAME} estÃ¡ lento.</name>
+                            <priority>AVERAGE</priority>
+                            <dependencies>
+                                <dependency>
+                                    <name>Erro ao fazer download da pÃ¡gina da {HOST.NAME}</name>
+                                    <expression>last(/Template_Sefaz_NFe_SdRedes/discovery[{$LINK}],#2)&lt;&gt;1</expression>
+                                </dependency>
+                            </dependencies>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <valuemaps>
+                <valuemap>
+                    <uuid>cbc43970cb9a41879be0aac57aa96756</uuid>
+                    <name>SEFAZ</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Offline</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>DisponÃ­vel</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>2</value>
+                            <newvalue>IndisponÃ­vel</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>5</value>
+                            <newvalue>Sem Dados</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+            </valuemaps>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <uuid>3b0b02ecc1e148aeb86bf005953b0273</uuid>
+            <name>Sefaz Servicos</name>
+            <graph_items>
+                <graph_item>
+                    <color>1A7C11</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>autstatus[{$AUT} AUTORIZACAO]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <color>F63100</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>conscad[{$AUT} CONSULTA.CADASTRO]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <color>2774A4</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>consprot[{$AUT} CONSULTA.PROTOCOLO]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <color>A54F10</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>inustatus[{$AUT} INUTILIZACAO]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <color>FC6EA3</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>recevent[{$AUT} RECEPCAO.EVENTO]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>5</sortorder>
+                    <color>6C59DC</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>retoaut[{$AUT} RETORNO.AUT]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>6</sortorder>
+                    <color>AC8C14</color>
+                    <item>
+                        <host>Template_Sefaz_NFe_SdRedes</host>
+                        <key>servstatus[{$AUT} SERVICO]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
